@@ -119,12 +119,19 @@ class _NoteScreenState extends State<NoteScreen> {
               _titlecontroller.clear();
               _descriptioncontroller.clear();
               Navigator.of(context).pop();
+              Fluttertoast.showToast(
+                gravity: ToastGravity.BOTTOM,
+                backgroundColor: Colors.grey.shade300,
+                msg: "Note Has Been Added!",
+                timeInSecForIosWeb: 3,
+                textColor: Colors.black,
+              );
 
               //this is condition to add value
             } else if (_titlecontroller.text.isEmpty &&
                 _descriptioncontroller.text.isNotEmpty) {
               final addNote = NoteModel(
-                tital: _descriptioncontroller.text,
+                tital: _descriptioncontroller.text.substring(0, 30),
                 description: _descriptioncontroller.text,
                 time: DateTime.now(),
                 backgroundColor: randomColor,
@@ -134,6 +141,14 @@ class _NoteScreenState extends State<NoteScreen> {
               _titlecontroller.clear();
               _descriptioncontroller.clear();
               Navigator.of(context).pop();
+              Fluttertoast.showToast(
+                gravity: ToastGravity.BOTTOM,
+                backgroundColor: Colors.grey.shade300,
+                msg: "Note Has Been Added!",
+                timeInSecForIosWeb: 3,
+                textColor: Colors.black,
+              );
+
               //add value if title is empty
             } else if (_titlecontroller.text.isEmpty &
                 _descriptioncontroller.text.isEmpty) {
@@ -160,7 +175,7 @@ class _NoteScreenState extends State<NoteScreen> {
             if (_titlecontroller.text.isNotEmpty &&
                 _descriptioncontroller.text.isNotEmpty) {
               final addNote = NoteModel(
-                tital: _titlecontroller.text.substring(0, 26),
+                tital: _titlecontroller.text.substring(0, 30),
                 description: _descriptioncontroller.text,
                 time: DateTime.now(),
                 backgroundColor: widget.noteContent!.backgroundColor,
