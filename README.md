@@ -1,4 +1,4 @@
-# todoapp
+# NoteApp
 
 A new Flutter project.
 
