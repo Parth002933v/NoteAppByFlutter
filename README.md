@@ -2,6 +2,19 @@
 
 A new Flutter project.
 
+
+
+
+
+
+https://github.com/Parth002933v/NoteAppByFlutter/assets/140066704/ec7711cc-d58c-4831-9e80-e440ceab9157
+
+
+
+
+
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
